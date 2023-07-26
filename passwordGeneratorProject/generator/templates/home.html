@@ -1,0 +1,28 @@
+<h1>Home</h1>
+<form method="post", action="{% url 'password' %}">
+    
+    <label>Wybierz</label>
+
+    <select required>
+    <option value="" selected disabled>Wybierz dłuość</option>
+    <option value="6"> 6 znaków</option>
+    <option value="7"> 7 znaków</option>
+    <option value="8"> 8 znaków</option>
+    <option value="9"> 9 znaków</option>
+    
+    </select>
+
+    <input type="checkbox" id="checkbox1">
+    <label for="checkbox1">Wielkie Litery</label>
+
+    <input type="checkbox" id="checkbox2">
+    <label for="checkbox2">Liczby</label>
+
+    <input type="checkbox" id="checkbox3">
+    <label for="checkbox3">Znaki specjalne<label>
+
+    {%csrf_token%}
+    <button type="submit">Wygeneruj hasło</button>    
+</form>
+
+
